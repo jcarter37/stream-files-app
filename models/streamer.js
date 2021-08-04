@@ -22,7 +22,6 @@ const streamerSchema = new Schema(
         profileImg: {
             type: String
         },
-        // streamer profile belongs to a user (user is referenced)
         user: {
             type: Schema.Types.ObjectId,
             ref: 'User'

@@ -14,6 +14,7 @@ async function index(req, res) {
 }
 
 async function create(req, res) {
+	req.body.user = req.user._id;
 	const streamer = await Streamer.create(req.body);
 	res.status(201).json(streamer);
 }
@@ -24,6 +25,8 @@ async function show(req, res) {
 }
 
 async function update(req, res) {
+	const streamer = await Streamer.findOne({id: req.params.id})
+	if (streamer.user !== req.user._id) return res.status(401).json('Unauthorized')
 	const updatedStreamer = await Streamer.findByIdAndUpdate(
 		req.params.id,
 		req.body,
@@ -35,6 +38,8 @@ async function update(req, res) {
 }
 
 async function deleteOne(req, res) {
+	const streamer = await Streamer.findOne({id: req.params.id})
+	if (streamer.user !== req.user._id) return res.status(401).json('Unauthorized')
 	const deletedStreamer = await Streamer.findByIdAndRemove(req.params.id);
 	res.status(200).json(deletedStreamer);
 }

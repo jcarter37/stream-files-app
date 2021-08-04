@@ -52,7 +52,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
 
           <Route exact path="/streamers">
-            <StreamerListPage streamers={streamers}
+            <StreamerListPage streamers={streamers} user={user}
               handleDeleteStreamer={handleDeleteStreamer}
             />
           </Route>
