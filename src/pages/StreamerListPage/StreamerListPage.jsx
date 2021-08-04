@@ -4,7 +4,7 @@ export default function StreamerListPage ( {streamers, handleDeleteStreamer} ) {
     return (
         <>
 			<h1>Streamer List</h1>
-			<div className='StreamerListPage-grid'>
+			<div>
 				{streamers.map(streamer => (
 					<StreamerList
 						streamer={streamer}

@@ -1,28 +1,18 @@
+import sendRequest from './send-request';
 const BASE_URL = '/api/streamers';
 
 export function getAll() {
-    return fetch(BASE_URL)
-    .then(res => res.json());
+    return sendRequest(BASE_URL)
 }
 
-export function create(streamer) {
-    return fetch(BASE_URL, {
-      method: 'POST',
-      headers: {'content-type': 'application/json'},
-      body: JSON.stringify(streamer)
-    }).then(res => res.json());
+export function create(formData) {
+    return sendRequest(BASE_URL, 'POST', formData);
   }
 
-  export function update(updatedStreamerData) {
-    return fetch(`${BASE_URL}/${updatedStreamerData._id}`, {
-      method: 'PUT',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(updatedStreamerData),
-    }).then(res => res.json());
-  }
+  export function update(updatedStreamer) {
+    return sendRequest(`${BASE_URL}/${updatedStreamer._id}`, 'PUT', updatedStreamer); 
+   }
   
   export function deleteOne(id) {
-    return fetch(`${BASE_URL}/${id}`, {
-      method: 'DELETE',
-    }).then(res => res.json());
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
   }

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-export default function EditStreamerPage(props) {
+export default function EditStreamerPage( {handleUpdateStreamer} ) {
   const location = useLocation();
 
   const [invalidForm, setValidForm] = useState(true);
@@ -15,7 +15,7 @@ export default function EditStreamerPage(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.handleUpdateStreamer(formData);
+    handleUpdateStreamer(formData);
   };
 
   const handleChange = (e) => {
@@ -27,7 +27,7 @@ export default function EditStreamerPage(props) {
 
   return (
     <>
-      <h1>Edit Puppy</h1>
+      <h1>Edit Profile</h1>
       <form ref={formRef} autoComplete="off" onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Name (required)</label>
@@ -77,10 +77,10 @@ export default function EditStreamerPage(props) {
           />
         </div>
         <button type="submit" className="btn btn-xs" disabled={invalidForm}>
-          SAVE PUPPY
+          SAVE
         </button>
         &nbsp;&nbsp;
-        <Link to="/">CANCEL</Link>
+        <Link to="/streamers">CANCEL</Link>
       </form>
     </>
   );
