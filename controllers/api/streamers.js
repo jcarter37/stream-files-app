@@ -25,10 +25,8 @@ async function show(req, res) {
 }
 
 async function update(req, res) {
-	const streamer = await Streamer.findOne({id: req.params.id})
-	if (streamer.user !== req.user._id) return res.status(401).json('Unauthorized')
-	const updatedStreamer = await Streamer.findByIdAndUpdate(
-		req.params.id,
+	const updatedStreamer = await Streamer.findOneAndUpdate(
+		{_id: req.params.id, user: req.user._id},
 		req.body,
 		{
 			new: true,
@@ -38,8 +36,6 @@ async function update(req, res) {
 }
 
 async function deleteOne(req, res) {
-	const streamer = await Streamer.findOne({id: req.params.id})
-	if (streamer.user !== req.user._id) return res.status(401).json('Unauthorized')
-	const deletedStreamer = await Streamer.findByIdAndRemove(req.params.id);
+	const deletedStreamer = await Streamer.findOneAndRemove({_id: req.params.id, user: req.user._id});
 	res.status(200).json(deletedStreamer);
 }
