@@ -17,7 +17,7 @@ export default function StreamerCard({ streamer }) {
           <dt>Platform</dt>
           <dd>{streamer.platform}</dd>
           <dt>Profile Pic</dt>
-          <dd>{streamer.profileImg}</dd>
+          <dd><img src={streamer.profileImg}/></dd>
         </dl>
       </div>
       <div className="panel-footer">
