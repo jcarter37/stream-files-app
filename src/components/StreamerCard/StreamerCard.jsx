@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function StreamerCard({ streamer, user, handleDeleteStreamer }) {
   return (
-    <div className="panel panel-default">
+    <div className="container-xxl">
       <div className="panel-heading">
         <h3 className="panel-title">{streamer.name}</h3>
       </div>
@@ -13,8 +13,8 @@ export default function StreamerCard({ streamer, user, handleDeleteStreamer }) {
           </dd>
           <dt>Name</dt>
           <dd>{streamer.name}</dd>
-          <dt>Age</dt>
-          <dd>{streamer.age}</dd>
+          <dt>Bio</dt>
+          <dd>{streamer.bio}</dd>
           <dt>Content/Category</dt>
           <dd>{streamer.content}</dd>
           <dt>Platform</dt>
@@ -48,3 +48,4 @@ export default function StreamerCard({ streamer, user, handleDeleteStreamer }) {
     </div>
   );
 }
+

@@ -8,8 +8,8 @@ const streamerSchema = new Schema(
             type: String,
             required: true
         },
-        age: {
-            type: Number
+        bio: {
+            type: String
         },
         content: {
             type: String,

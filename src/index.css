@@ -16,8 +16,8 @@ code {
 	--white: #ffffff;
 	--tan-1: #fbf9f6;
 	--tan-2: #e7e2dd;
-	--tan-3: #e2d9d1;
-	--tan-4: #d3c1ae;
+	--tan-3: #a55a18;
+	--tan-4: #3f0ccc;
 	--orange: #f67f00;
 	--text-light: #968c84;
 	--text-dark: #615954;
@@ -31,13 +31,13 @@ code {
 
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-		'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-		'Helvetica Neue', sans-serif;
+	font-family: 'Jura', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: var(--tan-4);
+	background-image: url(https://media.istockphoto.com/vectors/vector-seamless-pattern-background-icon-vector-id1170275727?k=6&m=1170275727&s=612x612&w=0&h=GrMw64_iHMm-ectfliHlneMSb7eNoYFfuw81VPqfG94=);
 	padding: 2vmin;
+	color: #00d9f6;
+	text-shadow: 0 0 2px #323533, 0 0 2px #323533;
 	height: 100vh;
 }
 
@@ -69,7 +69,7 @@ code {
 }
 
 .flex-col {
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .flex-j-end {
@@ -167,4 +167,28 @@ form:invalid button[type='submit'] {
 button[type='submit'] {
 	grid-column: span 2;
 	margin: 1vmin 0 0;
+}
+
+#container {
+	background-color: gray;
+}
+
+.navbar-light .navbar-brand {
+    color: #000000;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #292929;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.bg-light {
+    background-color: #4a8bcc!important;
 }

@@ -27,61 +27,81 @@ export default function EditStreamerPage( {handleUpdateStreamer} ) {
 
   return (
     <>
-      <h1>Edit Profile</h1>
-      <form ref={formRef} autoComplete="off" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Name (required)</label>
-          <input
-            className="form-control"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Age </label>
-          <input
-            className="form-control"
-            name="age"
-            value={formData.age}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Content/Category (required) </label>
-          <input
-            className="form-control"
-            name="content"
-            value={formData.content}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Platform (required) </label>
-          <input
-            className="form-control"
-            name="platform"
-            value={formData.platform}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Profile Pic </label>
-          <input
-            className="form-control"
-            name="profileImg"
-            value={formData.profileImg}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit" className="btn btn-xs" disabled={invalidForm}>
-          SAVE
+       <h1>Edit Streamer Profile</h1>
+      <form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Edit Streamer Profile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Name (required):</th>
+              <td>
+                <input
+                  className="form-control"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Bio (required):</th>
+              <td>
+                <input
+                  className="form-control"
+                  name="bio"
+                  value={formData.bio}
+                  onChange={handleChange}
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Content/Category (required):</th>
+              <td>
+                <input
+                  className="form-control"
+                  name="content"
+                  value={formData.content}
+                  onChange={handleChange}
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Platform (required):</th>
+              <td>
+                <input
+                  className="form-control"
+                  name="platform"
+                  value={formData.platform}
+                  onChange={handleChange}
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Profile Pic:</th>
+              <td>
+                <input
+                  className="form-control"
+                  name="profileImg"
+                  value={formData.profileImg}
+                  onChange={handleChange}
+                />
+              </td>
+            </tr>
+        <button type="submit" className="btn" disabled={invalidForm}>
+          EDIT STREAMER PROFILE
         </button>
+          </tbody>
+        </table>
+      </form>
         &nbsp;&nbsp;
         <Link to="/streamers">CANCEL</Link>
-      </form>
     </>
   );
 }
