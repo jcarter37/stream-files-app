@@ -22,7 +22,7 @@ export default function StreamerCard({ streamer, user, handleDeleteStreamer }) {
           {streamer.user === user._id ? (
             <>
               <Link
-                className="btn btn-xs btn-warning"
+                className="btn btn-secondary"
                 to={{
                   pathname: "/streamers/edit",
                   state: { streamer },
@@ -31,7 +31,7 @@ export default function StreamerCard({ streamer, user, handleDeleteStreamer }) {
                 EDIT
               </Link>
               <button
-                className="btn btn-xs btn-danger margin-left-10"
+                className="btn btn-danger"
                 onClick={() => handleDeleteStreamer(streamer._id)}
               >
                 DELETE

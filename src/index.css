@@ -17,7 +17,7 @@ code {
 	--tan-1: #fbf9f6;
 	--tan-2: #e7e2dd;
 	--tan-3: #a55a18;
-	--tan-4: #3f0ccc;
+	--gray-1: #616161;
 	--orange: #f67f00;
 	--text-light: #968c84;
 	--text-dark: #615954;
@@ -34,10 +34,11 @@ body {
 	font-family: 'Jura', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-image: url(https://media.istockphoto.com/vectors/vector-seamless-pattern-background-icon-vector-id1170275727?k=6&m=1170275727&s=612x612&w=0&h=GrMw64_iHMm-ectfliHlneMSb7eNoYFfuw81VPqfG94=);
+	background-image: url(https://wallpapercave.com/wp/wp2635955.jpg);
+	background-size: cover;
 	padding: 2vmin;
-	color: #000077;
-	text-shadow: 0 0 2px #8e8e94, 0 0 2px #8e8e94;
+	color: #9c9c9c;
+	text-shadow: 0 0 2px #000000, 0 0 2px #000000;
 	height: 100vh;
 }
 
@@ -161,7 +162,7 @@ button.btn-xs {
 button:disabled,
 form:invalid button[type='submit'] {
 	cursor: not-allowed;
-	background-color: var(--tan-4);
+	background-color: var(--gray-1);
 }
 
 button[type='submit'] {
@@ -174,7 +175,8 @@ button[type='submit'] {
 }
 
 .navbar-light .navbar-brand {
-    color: #000000;
+    color: #cecccf;
+	text-shadow: 0 0 6px #000000, 0 0 6px #000000;
 }
 
 .card {
@@ -183,12 +185,39 @@ button[type='submit'] {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #292929;
+    background-color: #6d6c6c;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
+    border-radius: 1.5rem;
 }
 
 .bg-light {
-    background-color: #4a8bcc!important;
+    background-color: #6d6c6c!important;
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+
+.btn-secondary{
+    color: #000;
+    background-color: #7c7c7c;
+    border-color: #ffffff;
+}
+
+.card-img, .card-img-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }

@@ -12,7 +12,7 @@ export default function StreamerList({ streamer }) {
       </div>
       <div className="panel-footer StreamerList-action-panel">
         <Link
-          className="btn btn-xs btn-info"
+          className="btn btn-xs btn-secondary"
           to={{
             pathname: "/streamers/details",
             state: { streamer },

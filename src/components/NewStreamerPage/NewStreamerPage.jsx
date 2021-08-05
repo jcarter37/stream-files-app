@@ -87,7 +87,7 @@ export default function NewStreamerPage({ handleNewStreamer }) {
               </td>
             </tr>
             <tr>
-              <th scope="row">Profile Pic:</th>
+              <th scope="row">Profile Pic (imgUrl):</th>
               <td>
                 <input
                   className="form-control"

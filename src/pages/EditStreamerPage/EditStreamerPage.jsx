@@ -94,14 +94,15 @@ export default function EditStreamerPage( {handleUpdateStreamer} ) {
                 />
               </td>
             </tr>
-        <button type="submit" className="btn" disabled={invalidForm}>
+        <button type="submit" className="btn btn-secondary" disabled={invalidForm}>
           EDIT STREAMER PROFILE
         </button>
+        <button className="btn btn-secondary" ><Link to="/streamers">CANCEL</Link></button>
           </tbody>
         </table>
       </form>
         &nbsp;&nbsp;
-        <Link to="/streamers">CANCEL</Link>
+        
     </>
   );
 }
