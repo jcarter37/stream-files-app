@@ -50,10 +50,8 @@ export default function App() {
       {user ? (
         <>
           <NavBar user={user} setUser={setUser} />
-
           <Route exact path="/streamers">
-            <StreamerListPage streamers={streamers} user={user}
-              handleDeleteStreamer={handleDeleteStreamer}
+            <StreamerListPage streamers={streamers}
             />
           </Route>
           <Route exact path="/streamers/new">
@@ -62,7 +60,7 @@ export default function App() {
             />
           </Route>
           <Route exact path="/streamers/details">
-            <StreamerInfoPage streamers={streamers} />
+            <StreamerInfoPage user={user} streamers={streamers} handleDeleteStreamer={handleDeleteStreamer} />
           </Route>
           <Route exact path="/streamers/edit">
             <EditStreamerPage handleUpdateStreamer={handleUpdateStreamer} />

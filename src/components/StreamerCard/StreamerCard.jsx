@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function StreamerCard({ streamer }) {
+export default function StreamerCard({ streamer, user, handleDeleteStreamer }) {
   return (
     <div className="panel panel-default">
       <div className="panel-heading">
@@ -17,7 +17,30 @@ export default function StreamerCard({ streamer }) {
           <dt>Platform</dt>
           <dd>{streamer.platform}</dd>
           <dt>Profile Pic</dt>
-          <dd><img src={streamer.profileImg}/></dd>
+          <dd>
+            <img src={streamer.profileImg} />
+          </dd>
+          {streamer.user === user._id ? (
+            <>
+              <Link
+                className="btn btn-xs btn-warning"
+                to={{
+                  pathname: "/streamers/edit",
+                  state: { streamer },
+                }}
+              >
+                EDIT
+              </Link>
+              <button
+                className="btn btn-xs btn-danger margin-left-10"
+                onClick={() => handleDeleteStreamer(streamer._id)}
+              >
+                DELETE
+              </button>
+            </>
+          ) : (
+            " "
+          )}
         </dl>
       </div>
       <div className="panel-footer">
