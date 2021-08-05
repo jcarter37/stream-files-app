@@ -8,6 +8,9 @@ export default function StreamerCard({ streamer, user, handleDeleteStreamer }) {
       </div>
       <div className="panel-body">
         <dl>
+          <dd>
+            <img src={streamer.profileImg} />
+          </dd>
           <dt>Name</dt>
           <dd>{streamer.name}</dd>
           <dt>Age</dt>
@@ -16,10 +19,6 @@ export default function StreamerCard({ streamer, user, handleDeleteStreamer }) {
           <dd>{streamer.content}</dd>
           <dt>Platform</dt>
           <dd>{streamer.platform}</dd>
-          <dt>Profile Pic</dt>
-          <dd>
-            <img src={streamer.profileImg} />
-          </dd>
           {streamer.user === user._id ? (
             <>
               <Link
