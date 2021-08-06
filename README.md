@@ -13,5 +13,9 @@ React
 Node
 Bootstrap
 
+## Getting Started
+https://trello.com/b/tfFKH9AG/project-3
+https://stream-files-app.herokuapp.com/streamers
+
 ## Next Steps
 Incorporate comments for users to leave on other profiles as well as features to sort profiles by category.
