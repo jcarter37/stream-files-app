@@ -97,7 +97,7 @@ export default function NewStreamerPage({ handleNewStreamer }) {
                 />
               </td>
             </tr>
-        <button type="submit" className="btn" disabled={invalidForm}>
+        <button type="submit" className="btn btn-secondary" disabled={invalidForm}>
           ADD STREAMER PROFILE
         </button>
           </tbody>
